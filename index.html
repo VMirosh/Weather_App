@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,41 @@
   <title>Weather_App</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-  <div class="wrapper">
-    <div class="title">OpenWeatherMap</div>
-    <div class="widget">
-      <div class="city"></div>
-      <div class="weather">
-        <div class="weather-item"></div>
+  <div class="card">
+    <div class="search">
+      <input type="text" class="search-bar" placeholder="Search" autofocus autocomplete="off">
+      <button><img src="./img/logo-search.png" alt="logo-search"></button>
+    </div>
+    <h3 class="time"></h3>
+    <div class="weather loading">
+      <div class="city-country">
+        <h2 class="city"></h2>
+        <h2 class="city country"></h2>
+
+      </div>
+      <h1 class="temp"></h1>
+      <div class="flex">
+        <img src="" alt="" class="icon">
         <div class="description"></div>
       </div>
-      <div class="clouds"></div>
+      <div class="humidity"></div>
+      <div class="wind"></div>
+      <div class="sun-position">
+        <!-- <div class="sun">
+          <img src="./img/sun.png" alt="sunrise">
+          <span class="sunrise">sa</span>
+        </div>
+        <div class="sun">
+          <img src="./img/sun" alt="sunset">
+          <span class="sunset">asd</span> -->
+        </div>
+      </div>
     </div>
-  </div> 
-  
-  <script src="js/main.js"></script>
+  </div>
+
+  <script src="js/main.js" defer></script>
 </body>
+
 </html>
