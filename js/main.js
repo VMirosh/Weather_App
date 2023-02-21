@@ -5,10 +5,16 @@ let icon = document.querySelector(".icon");
 let description = document.querySelector(".description");
 let humidity = document.querySelector(".humidity");
 let windSpeed = document.querySelector(".wind");
+// time today
+let time = document.querySelector(".time");
+let today = new Date();
+let formDate = options = { weekday: 'long', day: 'numeric' };
+let now = today.toLocaleString('en-US', formDate);
+time.append(now);
+
 
 
 let url = 'https://api.openweathermap.org/data/2.5/weather?q=Lviv&units=metric&appid=bf35cac91880cb98375230fb443a116f';
-
 
 fetch(url)
   .then(response => response.json())
@@ -33,13 +39,8 @@ fetch(url)
         flagTemp = true;
       }
     })
+    
   });
-// time today
-let time = document.querySelector(".time");
-let today = new Date();
-let formDate = options = { weekday: 'long', day: 'numeric' };
-let now = today.toLocaleString('en-US', formDate);
-time.append(now);
 
    
 
